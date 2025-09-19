@@ -3,5 +3,17 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="student" class="org.rajuttam.Student"/>
+    <!-- by default singleton scope is there and 2nd one is Prototype -->
+    <!-- <bean id="student" class="org.rajuttam.Student" scope = "prototype"/> -->
+
+    <!-- No. of bean tag use to create object  = no. of object created only for diff. id if having same class -->
+
+    <bean id="student" class="org.rajuttam.Student" >
+ <!-- setter Injection because we use setter method to set the primitive data type value-->
+        <property name = "age" value = "20" > </property>
+    </bean>
+
+
+
+
 </beans>
